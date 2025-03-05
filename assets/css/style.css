@@ -40,6 +40,11 @@ footer {
     width: 100%;
 }
 
+.tech-icon {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+}
+
 .card:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
