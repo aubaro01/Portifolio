@@ -41,8 +41,9 @@ footer {
 }
 
 .tech-icon {
-    width: 40px; /* Ajuste o tamanho conforme necessário */
-    height: 40px; /* Ajuste o tamanho conforme necessário */
+    width: 20px; /* Tamanho reduzido */
+    height: 20px; /* Tamanho reduzido */
+
 }
 
 .card:hover {
