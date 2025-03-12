@@ -50,6 +50,30 @@ footer {
     transition: transform 0.3s;
 }
 
+        /* Estilo clássico para as abas */
+        .nav-tabs .nav-link {
+            border: 1px solid #ddd;
+            border-bottom: none;
+            background-color: #f8f9fa;
+            color: #333;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #fff;
+            border-color: #ddd #ddd #fff;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 0 5px 5px 5px;
+    
+
 @media (max-width: 768px) {
     .tech-icon {
         width: 30px;
