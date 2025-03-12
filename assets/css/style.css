@@ -76,13 +76,13 @@ footer {
         }
 
 .tech-iconCard {
-            width: 6px;
-            height: 6px;
-            transition: transform 0.2s ease-in-out;
+            width: 6px !important;
+            height: 6px !important;
+            transition: transform 0.2s ease-in-out !important;
  }
 
 .tech-iconCard:hover {
-            transform: scale(1.2);
+            transform: scale(1.2) !important;
 }
 
 @media (max-width: 768px) {
