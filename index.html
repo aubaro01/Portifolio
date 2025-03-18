@@ -15,29 +15,48 @@
             transition: transform 0.2s ease-in-out;
         }
         #habilidade {
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa a seção */
-    white-space: nowrap; /* Mantém os cartões em uma única linha */
-    position: relative;
-}
-
-.scroller {
-    display: flex; /* Alinha os dois contêineres lado a lado */
-    animation: slide 20s linear infinite; /* Aplica a animação */
-}
-
-.row {
-    display: flex; /* Alinha os cartões horizontalmente */
-    flex-shrink: 0; /* Impede que os contêineres encolham */
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0); /* Começa na posição inicial */
+        overflow: hidden;
+        position: relative;
+        padding: 20px 0;
     }
-    100% {
-        transform: translateX(-50%); /* Move os contêineres para a esquerda */
+
+    .scroller {
+        display: flex;
+        flex-wrap: nowrap;
+        animation: slide 20s linear infinite;
     }
-}
+
+    .row-wrapper {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: nowrap;
+        width: max-content;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .row:nth-child(odd) .scroller {
+        animation-duration: 20s;
+    }
+
+    .row:nth-child(even) .scroller {
+        animation-duration: 25s;
+        animation-direction: reverse;
+    }
+       
     </style>
 </head>
 <body>
@@ -76,8 +95,15 @@
 
     <section id="habilidade">
     <h2 class="mt-5 text-center">Skills</h2>
-    <div class="row justify-content-center mt-4">
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
+    <div class="row-wrapper">
+        <div class="scroller">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
+                        <h6 class="card-title mt-2">HTML5</h6>
+                    </div>
+                </div>
             <div class="card tech-card text-center p-3">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
                 <h6 class="card-title mt-2">HTML5</h6>
@@ -150,6 +176,7 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
 
         <section id="projetos" class="container py-5">
@@ -203,6 +230,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
                <!-- <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 shadow-lg rounded-3 border-0">
                         <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
