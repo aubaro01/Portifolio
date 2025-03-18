@@ -20,20 +20,20 @@
         padding: 20px 0;
     }
 
-    .scroller {
+    .scroller-habilidade {
         display: flex;
         flex-wrap: nowrap;
         animation: slide 20s linear infinite;
     }
 
-    .row-wrapper {
+    .row-wrapper-habilidade {
         overflow: hidden;
         white-space: nowrap;
         width: 100%;
         margin-bottom: 10px;
     }
 
-    .row {
+    .row-habilidade {
         display: flex;
         flex-wrap: nowrap;
         width: max-content;
@@ -48,11 +48,11 @@
         }
     }
 
-    .row:nth-child(odd) .scroller {
+    .row-habilidade:nth-child(odd) .scroller {
         animation-duration: 20s;
     }
 
-    .row:nth-child(even) .scroller {
+    .row-habilidade:nth-child(even) .scroller {
         animation-duration: 25s;
         animation-direction: reverse;
     }
@@ -95,9 +95,9 @@
 
     <section id="habilidade">
     <h2 class="mt-5 text-center">Skills</h2>
-    <div class="row-wrapper">
-        <div class="scroller">
-            <div class="row">
+    <div class="row-wrapper-habilidade">
+        <div class="scroller-habilidade">
+            <div class="row-habilidade">
                 <div class="col-md-2 col-sm-4 col-6 mb-4">
                     <div class="card tech-card text-center p-3">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
