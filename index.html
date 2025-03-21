@@ -1,74 +1,69 @@
+aplica aqui 
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio - Cláudio Barroso</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel ="stylesheet" href="../assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/img/IMG_6017.ico" type="image/x-icon" alt="Logotipo">
+    <link rel="shortcut icon" href="/assets/img/IMG_6017.ico " type="image/x-icon" alt="Logotipo">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <style>
        #habilidade {
-            text-align: center;
-            padding: 50px 0;
-        }
+    text-align: center;
+    padding: 50px 0;
+}
 
-        .row-wrapper-habilidade {
-            display: flex;
-            overflow-x: auto; /* Melhor para dispositivos móveis */
-            scroll-snap-type: x mandatory; 
-            gap: 20px;
-        }
+.row-wrapper-habilidade {
+    display: flex;
+    overflow-x: scroll; /* Permite a rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Faz com que o conteúdo pare de forma mais agradável */
+    gap: 20px;
+}
 
-        .tech-card {
-            width: 120px;
-            height: 120px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
+.row-habilidade {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+}
 
-        .tech-card:hover {
-            transform: scale(1.1);
-        }
+.tech-card {
+    width: 120px; /* Definição de um tamanho consistente */
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
 
-        .tech-icon {
-            width: 40px !important;
-            height: 40px !important;
-        }
+.tech-card:hover {
+    transform: scale(1.1);
+}
 
-        @media (max-width: 767px) {
-            .row-wrapper-habilidade {
-                flex-direction: column;
-                align-items: center;
-                overflow-x: hidden;
-            }
-        }
+.tech-icon {
+    width: 40px !important;
+    height: 40px !important;
+}
 
-        .scroller-habilidade {
-            display: flex;
-            animation: scrollAnimation 15s linear infinite;
-        }
+/* Caso queira uma rolagem contínua, é possível usar animação com CSS */
+.scroller-habilidade {
+    display: flex;
+    animation: scrollAnimation 15s linear infinite; /* Efeito contínuo */
+}
 
-        @keyframes scrollAnimation {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Rolagem completa */
+    }
+}
 
-        .nav-item a {
-            font-size: 1.1rem;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .nav-item a:hover {
-            color: #ffab00;
-        }
     </style>
 </head>
 <body>
@@ -80,90 +75,119 @@
                 <li class="nav-item"><a class="nav-link text-white" href="#projetos">Projetos</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#experiencia">Experiência</a></li>
             </ul>
-        </nav>
-    </header>
-    
+        </nav> 
+    </header>   
     <main>
         <section class="bg-light text-center py-5">
             <div class="container">
                 <h1>Cláudio Barroso</h1>
-                <p class="lead">Full Stack Developer Web</p>
-                <p class="lead">Software Developer</p>
+                <p class="lead"><br>Full Stack Developer Web</p>
+                <p class="lead"><br>Software Developer</p>
             </div>
         </section>
 
         <section id="sobre" class="container py-5">
-    <h2 class="justify-content-sm-start">Quem sou?</h2>
-    <div class="row">
-        <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
-            <img src="assets/img/perf.jpg" class="rounded float-end img-fluid" alt="Cláudio Barroso" style="max-width: 100%; height: auto;">
-        </div>
-        <div class="col-lg-8 col-md-7 col-sm-12">
-            <p class="lead">
-                <br>Olá, chamo-me <strong>Cláudio Barroso</strong> e como podem ver sou um amante de tecnologia. A programação começou a se tornar realidade para mim em 2020, quando iniciei o curso de <strong>Gestão e Programação de Sistemas Informáticos.</strong><br>
-                A partir daí, iniciou a "caminhada" dentro do mundo da programação. Também sou (2025) aluno no <strong>ISTEC (Instituto Superior de Tecnologias Avançadas do Porto)</strong>, onde estou a frequentar o curso de Desenvolvimento de Software.<br>
-                Tenho como alvos e paixões aprender e fazer mais neste mundo da programação, por isso, quem vai saber o meu próximo passo? :))<br>
-                Atenciosamente,
-            </p>
+            <h2 class="justify-content-sm-start">Quem sou?</h2>
+            <img src="assets/img/perf.jpg" class="rounded float-end img-fluid ms-5" alt="Cláudio Barroso" style="max-width: 300px;">
+            <p class="lead"><br>Olá, chamo-me <strong>Cláudio Barroso </strong>e como podem ver sou um amante de tecnologia. Programação começou a torna-se realidade para mim em 2020 quando iniciei o curso de <strong>Gestão e Programação de Sistemas Informáticos.</strong><br> A partir daí inicia a "caminhada" dentro do mundo da programação. Também sou (2025) aluno no <strong>ISTEC ( Instituto Superior de Tecnologias Avançadas do Porto)</strong>, onde estou a frequentar o curso de Desenvolvimento de Software.<br>
+            <br>Tenho como alvos e paixões aprender e fazer mais neste mundo da programação, por isso, quem vai saber o meu próximo passo? :)).<br>
+            <br>Atenciosamente,</p>
             <p><em>Cláudio Barroso</em><br></p>
             <p><br>Email: <a href="mailto:claudiobarroso106@gmail.com">claudiobarroso106@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/aubaro01">Aubaro01</a></p>
             <h2>Anexos:</h2>
             <p><br>Curriculum Vitae: <a href="assets/anexos/cv_ClaudioPT.pdf">Descarregar</a></p>
-            <p>Certificado Google em Dados: <a href="assets/anexos/analista_dados.pdf">Descarregar</a></p>
+            <p>Certificado google em Dados: <a href="assets/anexos/analista_dados.pdf">Descarregar</a></p>
+        </section>
+
+   <section id="habilidade">
+    <h2 class="mt-5 text-center">Skills</h2>
+    <div class="container">
+        <div class="scroller-habilidade">
+            <div class="row-habilidade">
+                <!-- Colocar os cards aqui -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
+                        <h6 class="card-title mt-2">HTML5</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="tech-icon">
+                        <h6 class="card-title mt-2">CSS3</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="PHP" class="tech-icon">
+                        <h6 class="card-title mt-2">PHP</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/mongodb.svg" alt="MongoDB" class="tech-icon">
+                        <h6 class="card-title mt-2">MongoDB</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mysql.svg" alt="MySQL" class="tech-icon">
+                        <h6 class="card-title mt-2">MySQL</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript" class="tech-icon">
+                        <h6 class="card-title mt-2">JavaScript</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
+                        <h6 class="card-title mt-2">Python</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/c.svg" alt="C" class="tech-icon">
+                        <h6 class="card-title mt-2">C</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
+                        <h6 class="card-title mt-2">Bootstrap</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
+                        <h6 class="card-title mt-2">React.js</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/express.svg" alt="Express.js" class="tech-icon">
+                        <h6 class="card-title mt-2">Express.js</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/laravel.svg" alt="Laravel" class="tech-icon">
+                        <h6 class="card-title mt-2">Laravel</h6>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 
-        <section id="habilidade">
-            <h2 class="mt-5 text-center">Skills</h2>
-            <div class="container">
-                <div class="scroller-habilidade">
-                    <div class="row-habilidade">
-                        <!-- Habilidades Cards -->
-                        <div class="col-md-2 col-sm-4 col-6 mb-4">
-                            <div class="card tech-card text-center p-3">
-                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
-                                <h6 class="card-title mt-2">HTML5</h6>
-                            </div>
-                        </div>
-                         <div class="col-md-2 col-sm-4 col-6 mb-4">
-                            <div class="card tech-card text-center p-3">
-                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
-                                <h6 class="card-title mt-2">HTML5</h6>
-                            </div>
-                        </div>
-                         <div class="col-md-2 col-sm-4 col-6 mb-4">
-                            <div class="card tech-card text-center p-3">
-                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
-                                <h6 class="card-title mt-2">HTML5</h6>
-                            </div>
-                        </div>
-                         <div class="col-md-2 col-sm-4 col-6 mb-4">
-                            <div class="card tech-card text-center p-3">
-                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
-                                <h6 class="card-title mt-2">HTML5</h6>
-                            </div>
-                        </div>
-                         <div class="col-md-2 col-sm-4 col-6 mb-4">
-                            <div class="card tech-card text-center p-3">
-                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
-                                <h6 class="card-title mt-2">HTML5</h6>
-                            </div>
-                        </div>
-                    
-                        <!-- Repita para outras tecnologias -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="projetos" class="container py-5">
             <h2 class="text-center mb-5">Projetos</h2>
             <div class="row justify-content-center">
-                <!-- Cartões de Projetos -->
-                <div class="col-lg-4 col-md-6 mb-4">
+                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 shadow-lg rounded-3 border-0">
                         <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
                             <img src="assets/img/maclongo.png" alt="Projeto 2" style="max-height: 80px;">
@@ -175,11 +199,88 @@
                         </div>
                     </div>
                 </div>
+                 <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg rounded-3 border-0">
+                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
+                            <img src="assets/img/sav.png" alt="Projeto 2" style="max-height: 80px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Primeiros Socorros</h5>
+                            <p class="card-text">Projeto voluntário</p>
+                            <a href="https://github.com/aubaro01/Prsocorros" class="btn btn-primary">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg rounded-3 border-0">
+                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
+                            <img src="assets/img/pc_auto.png" alt="Projeto 2" style="max-height: 80px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pc Auto</h5>
+                            <p class="card-text">Criação de uma App em python que faça a gestão de clientes, veículos e marcações a uma oficina</p>
+                            <a href="https://github.com/aubaro01/Pc-Auto" class="btn btn-primary">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg rounded-3 border-0">
+                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
+                            <img src="assets/img/docto.png" alt="Projeto 3" style="max-height: 80px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Projeto de PAW</h5>
+                            <p class="card-text">Uma aplicação web para psicólogos. Projeto colaborativo.</p>
+                            <a href="https://github.com/aubaro01/paw-project" class="btn btn-primary">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+               <!-- <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg rounded-3 border-0">
+                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
+                            <img src="assets/img/git.png" alt="Projeto 3" style="max-height: 80px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pc Auto Web</h5>
+                            <p class="card-text">Criação de uma App Web que faça a gestão de clientes, veículos e marcações a uma oficina</p>
+                            <a href="https://github.com/aubaro01/Pc_Auto-Web" class="btn btn-primary">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div> -->
+             <!--    <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg rounded-3 border-0">
+                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
+                            <img src="assets/img/git.png" alt="Projeto 3" style="max-height: 80px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">State2State</h5>
+                            <p class="card-text">Um Projeto web, em que mostra o mundo da forma que eu vejo</p>
+                            <a href="https://github.com/aubaro01/State2State" class="btn btn-primary">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div> -
+                 
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-lg rounded-3 border-0">
+                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
+                            <img src="assets/img/git.png" alt="Projeto 2" style="max-height: 80px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">tell me about?</h5>
+                            <p class="card-text">Uma web app que consome uma api..</p>
+                            <a href="https://github.com/aubaro01/#" class="btn btn-primary">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
         </section>
+
 
         <section id="experiencia" class="container py-5">
             <h2 class="text-center mb-5">Experiência</h2>
+            
             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="programacao-tab" data-bs-toggle="tab" data-bs-target="#programacao" type="button" role="tab" aria-controls="programacao" aria-selected="true">Dentro da Programação</button>
@@ -188,12 +289,52 @@
                     <button class="nav-link" id="outros-tab" data-bs-toggle="tab" data-bs-target="#outros" type="button" role="tab" aria-controls="outros" aria-selected="false">Fora da Programação</button>
                 </li>
             </ul>
+
             <div class="tab-content mt-3" id="myTabContent">
-                <!-- Conteúdo das tabs aqui -->
+                <div class="tab-pane fade show active" id="programacao" role="tabpanel" aria-labelledby="programacao-tab">
+                    <h3 class="mt-4">Experiências com Informática</h3><br>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Estágio DREAM ID </strong>
+                            <p><strong>Abril 2023 - Julho 2023</strong></p>
+                            <p>Neste estagio realizei a manutenção e configuração de pc’s, suporte técnico a clientes, configuração de sistemas de redes e montagem de sistemas informáticos. <br>
+                               Além disso fiz um miniprojeto que copiava osoftware da empresa.</p>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Estágio Epharma</strong>
+                            <p><strong>Março 2025 - Julho 2025</strong></p>
+                            <p>-----</p>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Projetos freelancer</strong>
+                            <p>Projetos para lojas (web sites, web app para gestão) e para outros tipos de empreendimentos</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="outros" role="tabpanel" aria-labelledby="outros-tab">
+                    <h3 class="mt-4">Experiências Fora da Informática</h3><br>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Manager de loja(Moamba d'Angola)</strong>
+                            <p><strong>setembro 2023 / Atualmente</strong></p>
+                            <p>Gestão de produtos, encomendas, atendimento ao público e vendas.</p>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Estágio Cm Valongo</strong>
+                            <p><strong>Junho 2022 - Julho 2022</strong></p>
+                            <p>Apoio em projetos, criação de ideias, auxilio na organização e finalização de projetos já existentes.<br>
+                               Manutenção e atualizaçãodo sistemas da câmara Municipal.</p>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Trabalhos voluntários</strong>
+                            <p><strong>Dezembro 2023 / Atualmente</strong></p>
+                            <p>Participação em projetos voluntários em diferentes áreas...<br> como, pintura, manunteção de jardins, manunteção de redes informáticas para uma associação religiosa.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-    </main>
-
+    </main>   
     <footer class="bg-dark text-white text-center py-3 mt-4">
         <p>&copy; 2025 aubaro01.</p>
     </footer>
