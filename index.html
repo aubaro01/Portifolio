@@ -14,10 +14,15 @@
     padding: 50px 0;
 }
 
+.row-wrapper-habilidade {
+    display: flex;
+    overflow-x: scroll; /* Permite a rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Faz com que o conteúdo pare de forma mais agradável */
+    gap: 20px;
+}
+
 .row-habilidade {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 20px; /* Espaçamento entre os itens */
 }
 
@@ -43,7 +48,21 @@
     height: 40px !important;
 }
 
-       */
+/* Caso queira uma rolagem contínua, é possível usar animação com CSS */
+.scroller-habilidade {
+    display: flex;
+    animation: scrollAnimation 15s linear infinite; /* Efeito contínuo */
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Rolagem completa */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -80,87 +99,89 @@
             <p>Certificado google em Dados: <a href="assets/anexos/analista_dados.pdf">Descarregar</a></p>
         </section>
 
-    <section id="habilidade">
+   <section id="habilidade">
     <h2 class="mt-5 text-center">Skills</h2>
-    <div class="row-wrapper-habilidade">
+    <div class="container">
         <div class="scroller-habilidade">
             <div class="row-habilidade">
+                <!-- Colocar os cards aqui -->
                 <div class="col-md-2 col-sm-4 col-6 mb-4">
                     <div class="card tech-card text-center p-3">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
                         <h6 class="card-title mt-2">HTML5</h6>
                     </div>
                 </div>
-         <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="tech-icon">
-                <h6 class="card-title mt-2">CSS3</h6>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="tech-icon">
+                        <h6 class="card-title mt-2">CSS3</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="PHP" class="tech-icon">
+                        <h6 class="card-title mt-2">PHP</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/mongodb.svg" alt="MongoDB" class="tech-icon">
+                        <h6 class="card-title mt-2">MongoDB</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mysql.svg" alt="MySQL" class="tech-icon">
+                        <h6 class="card-title mt-2">MySQL</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript" class="tech-icon">
+                        <h6 class="card-title mt-2">JavaScript</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
+                        <h6 class="card-title mt-2">Python</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/c.svg" alt="C" class="tech-icon">
+                        <h6 class="card-title mt-2">C</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
+                        <h6 class="card-title mt-2">Bootstrap</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
+                        <h6 class="card-title mt-2">React.js</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/express.svg" alt="Express.js" class="tech-icon">
+                        <h6 class="card-title mt-2">Express.js</h6>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-4">
+                    <div class="card tech-card text-center p-3">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/laravel.svg" alt="Laravel" class="tech-icon">
+                        <h6 class="card-title mt-2">Laravel</h6>
+                    </div>
+                </div>
             </div>
-        </div>
-         <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="PHP" class="tech-icon">
-                <h6 class="card-title mt-2">PHP</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/mongodb.svg" alt="MongoDB" class="tech-icon">
-                <h6 class="card-title mt-2">MongoDB</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mysql.svg" alt="MySQL" class="tech-icon">
-                <h6 class="card-title mt-2">MySQL</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript" class="tech-icon">
-                <h6 class="card-title mt-2">JavaScript</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
-                <h6 class="card-title mt-2">Python</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/c.svg" alt="C" class="tech-icon">
-                <h6 class="card-title mt-2">C</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
-                <h6 class="card-title mt-2">Bootstrap</h6>
-            </div>
-          </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
-                <h6 class="card-title mt-2">React.js</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/express.svg" alt="Express.js" class="tech-icon">
-                <h6 class="card-title mt-2">Express.js</h6>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-6 mb-4">
-            <div class="card tech-card text-center p-3">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/laravel.svg" alt="Laravel" class="tech-icon">
-                <h6 class="card-title mt-2">Laravel</h6>
-             </div>
-          </div>
         </div>
     </div>
-</div>
 </section>
+
 
         <section id="projetos" class="container py-5">
             <h2 class="text-center mb-5">Projetos</h2>
