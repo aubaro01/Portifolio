@@ -93,6 +93,15 @@
             border-radius: 50%;
             background: #3B82F6;
         }
+        
+        .experience-tab {
+            transition: all 0.3s ease;
+        }
+        
+        .experience-tab.active {
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+            color: white;
+        }
     </style>
 </head>
 <body class="font-sans bg-light text-dark antialiased">
@@ -152,7 +161,7 @@
         </div>
     </section>
 
-    <!-- Sobre Mim -->
+    <!-- Sobre Mim - Versão Melhorada -->
     <section id="sobre" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -162,85 +171,102 @@
             
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-2/5">
-                    <div class="bg-white p-8 rounded-xl shadow-lg relative">
+                    <div class="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
                         <div class="absolute -top-5 -left-5 bg-primary w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl">
-                            <i class="fas fa-quote-left"></i>
+                            <i class="fas fa-user-tie"></i>
                         </div>
                         
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Minha jornada na tecnologia começou em 2020 com o curso de <strong class="font-semibold">Gestão e Programação de Sistemas Informáticos</strong>, e desde então tenho me dedicado intensamente ao desenvolvimento de software.
-                        </p>
-                        
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Atualmente em 2025, estou cursando <strong class="font-semibold">Desenvolvimento de Software no ISTEC</strong>, onde aprofundo meus conhecimentos em arquitetura de sistemas, engenharia de software e tecnologias modernas.
-                        </p>
-                        
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            Acredito que a tecnologia deve resolver problemas reais e melhorar a vida das pessoas. Meu objetivo é continuar evoluindo como profissional, enfrentando desafios complexos e contribuindo para projetos inovadores.
-                        </p>
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold mb-4 gradient-text">Minha Filosofia</h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Acredito que o código bem escrito é como poesia - deve ser elegante, eficiente e fácil de entender. Minha abordagem combina <strong class="font-semibold">engenharia de software sólida</strong> com <strong class="font-semibold">design centrado no usuário</strong>.
+                            </p>
+                            
+                            <h3 class="text-xl font-bold mb-4 gradient-text">Jornada Profissional</h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Comecei minha jornada em 2020 e desde então venho me especializando em desenvolvimento Full Stack. Atualmente curso <strong class="font-semibold">Desenvolvimento de Software no ISTEC</strong>, onde aprofundo conhecimentos em arquitetura de sistemas e tecnologias modernas.
+                            </p>
+                            
+                            <h3 class="text-xl font-bold mb-4 gradient-text">Fora do Código</h3>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Quando não estou programando, gosto de contribuir com projetos comunitários, participar de hackathons e explorar novas tecnologias. Acredito no <strong class="font-semibold">aprendizado contínuo</strong> e no poder da tecnologia para transformar vidas.
+                            </p>
+                        </div>
                     </div>
                     
                     <div class="mt-8 grid grid-cols-2 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h4 class="font-semibold text-primary mb-2">Nome:</h4>
-                            <p>Cláudio Barroso</p>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex items-center">
+                            <i class="fas fa-user text-primary mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-1">Nome:</h4>
+                                <p>Cláudio Barroso</p>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h4 class="font-semibold text-primary mb-2">Email:</h4>
-                            <a href="mailto:claudiobarroso106@gmail.com" class="hover:text-primary">claudiobarroso106@gmail.com</a>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-1">Email:</h4>
+                                <a href="mailto:claudiobarroso106@gmail.com" class="hover:text-primary">claudiobarroso106@gmail.com</a>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h4 class="font-semibold text-primary mb-2">GitHub:</h4>
-                            <a href="https://github.com/aubaro01" target="_blank" class="hover:text-primary">github.com/aubaro01</a>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex items-center">
+                            <i class="fab fa-github text-primary mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-1">GitHub:</h4>
+                                <a href="https://github.com/aubaro01" target="_blank" class="hover:text-primary">github.com/aubaro01</a>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h4 class="font-semibold text-primary mb-2">Formação:</h4>
-                            <p>Desenvolvimento de Software</p>
-                            <p>Gestão e programaçao de Sistemas Informáticos</p>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-1">Formação:</h4>
+                                <p>Desenvolvimento de Software</p>
+                                <p>Gestão e Programação de Sistemas</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="lg:w-3/5">
-                    <h3 class="text-2xl font-semibold mb-6">Minhas <span class="gradient-text">skills</span></h3>
+                    <h3 class="text-2xl font-semibold mb-6">Minhas <span class="gradient-text">Habilidades</span></h3>
                     
                     <div class="mb-8">
-                        <h4 class="text-lg font-medium mb-3">Frontend Development</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-lg font-medium">Frontend Development</h4>
+                            <span class="text-sm text-gray-500">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-gradient-to-r from-primary to-blue-400 h-2.5 rounded-full" style="width: 90%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-8">
-                        <h4 class="text-lg font-medium mb-3">Backend Development</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Express.js</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PHP</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Laravel</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-lg font-medium">Backend Development</h4>
+                            <span class="text-sm text-gray-500">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-gradient-to-r from-green-500 to-secondary h-2.5 rounded-full" style="width: 85%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-8">
-                        <h4 class="text-lg font-medium mb-3">Banco de Dados</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MySQL</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-lg font-medium">Banco de Dados</h4>
+                            <span class="text-sm text-gray-500">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-400 h-2.5 rounded-full" style="width: 80%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-8">
-                        <h4 class="text-lg font-medium mb-3">Outras Tecnologias</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Git</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">REST APIs</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">C</span>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-lg font-medium">UI/UX Design</h4>
+                            <span class="text-sm text-gray-500">75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-gradient-to-r from-pink-500 to-pink-400 h-2.5 rounded-full" style="width: 75%"></div>
                         </div>
                     </div>
                     
@@ -332,153 +358,195 @@
         </div>
     </section>
 
-    <!-- Projetos -->
+    <!-- Projetos - Versão Melhorada -->
     <section id="projetos" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">Meus <span class="gradient-text">Projetos</span></h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Alguns dos projetos que desenvolvi, demonstrando minha variedade de habilidades e experiência
+                    Soluções que desenvolvi, combinando criatividade, tecnologia e boas práticas de desenvolvimento
                 </p>
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projeto 1 -->
+                <!-- Projeto 1 - Melhorado -->
                 <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <img src="assets/img/maclongo.png" alt="Maclongo" class="h-24">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative">
+                        <img src="assets/img/maclongo.png" alt="Maclongo" class="h-24 object-contain">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent h-16"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Maclongo</h3>
-                        <p class="text-gray-600 mb-4">Restruturação completa e implementação de novas funcionalidades para o website da empresa.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">HTML</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">CSS</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Bootstrap</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">PHP</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Maclongo</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Freelance</span>
                         </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/aubaro01/Maclongo_Projeto" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                        <p class="text-gray-600 mb-4 text-sm">Restruturação completa do website com implementação de novas funcionalidades para a empresa.</p>
+                        <div class="mb-5">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-2">DESAFIOS SUPERADOS:</h4>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Migração para um design responsivo</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Integração com sistema de pagamento</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Otimização de performance</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">MySQL</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-4">
+                            <a href="https://github.com/aubaro01/Maclongo_Projeto" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fab fa-github mr-2"></i> Código
                             </a>
-                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fas fa-external-link-alt mr-2"></i> Demo
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Projeto 2 -->
+                <!-- Projeto 2 - Melhorado -->
                 <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <img src="assets/img/sav.png" alt="Primeiros Socorros" class="h-24">
+                    <div class="h-48 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center relative">
+                        <img src="assets/img/sav.png" alt="Primeiros Socorros" class="h-24 object-contain">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent h-16"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Primeiros Socorros</h3>
-                        <p class="text-gray-600 mb-4">Aplicação web para voluntariado em prevenção e segurança, com guias interativos.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">React.js</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MongoDB</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Express.js</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Node.js</span>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Primeiros Socorros</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Voluntariado</span>
                         </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                        <p class="text-gray-600 mb-4 text-sm">Plataforma educativa com guias interativos para voluntários de primeiros socorros.</p>
+                        <div class="mb-5">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-2">RECURSOS PRINCIPAIS:</h4>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Simulador de emergências</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Tutoriais passo-a-passo</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Sistema de certificação</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Node.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">MongoDB</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Express.js</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-4">
+                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fab fa-github mr-2"></i> Código
                             </a>
-                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fas fa-external-link-alt mr-2"></i> Demo
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Projeto 3 -->
                 <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <img src="assets/img/pc_auto.png" alt="PC Auto" class="h-24">
+                    <div class="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center relative">
+                        <img src="assets/img/pc_auto.png" alt="PC Auto" class="h-24 object-contain">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent h-16"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">PC Auto</h3>
-                        <p class="text-gray-600 mb-4">Sistema de gestão para oficinas automóveis com controle de clientes, veículos e marcações.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Python</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Tkinter</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">PC Auto</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Acadêmico</span>
                         </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/aubaro01/Pc-Auto" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> Código
+                        <p class="text-gray-600 mb-4 text-sm">Sistema completo para gestão de oficinas automóveis com controle de clientes, veículos e serviços.</p>
+                        <div class="mb-5">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-2">FUNCIONALIDADES:</h4>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Agendamento online</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Histórico de serviços</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Relatórios financeiros</li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Projeto 4 -->
-                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <img src="assets/img/docto.png" alt="Projeto PAW" class="h-24">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Projeto PAW</h3>
-                        <p class="text-gray-600 mb-4">Plataforma web para psicólogos com agendamento, histórico de pacientes e relatórios.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Next.js</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MongoDB</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Node.js</span>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Tkinter</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">MySQL</span>
                         </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/aubaro01/paw-project" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                        <div class="flex justify-between border-t pt-4">
+                            <a href="https://github.com/aubaro01/Pc-Auto" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fab fa-github mr-2"></i> Código
                             </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projeto 5 -->
-                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <img src="assets/img/sav.png" alt="MYDash" class="h-24">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">MYDash</h3>
-                        <p class="text-gray-600 mb-4">Sistema de dashboard administrativo com CRUD completo e autenticação de usuários.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">PHP</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Bootstrap</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> Código
-                            </a>
-                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fas fa-external-link-alt mr-2"></i> Demo
                             </a>
                         </div>
                     </div>
                 </div>
-                 <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <img src="assets/img/sav.png" alt="MYDash" class="h-24">
+                
+                <!-- Projeto 4 - Melhorado -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center relative">
+                        <img src="assets/img/docto.png" alt="Projeto PAW" class="h-24 object-contain">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent h-16"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">MYDash</h3>
-                        <p class="text-gray-600 mb-4">Sistema de dashboard administrativo com CRUD completo e autenticação de usuários.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">PHP</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Bootstrap</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Projeto PAW</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Acadêmico</span>
                         </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                        <p class="text-gray-600 mb-4 text-sm">Plataforma web para psicólogos com gestão de pacientes, agendamentos e relatórios clínicos.</p>
+                        <div class="mb-5">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-2">INOVAÇÕES:</h4>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Agenda inteligente</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Anotações seguras</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Teleconsulta integrada</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Next.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Tailwind CSS</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">MongoDB</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Node.js</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-4">
+                            <a href="https://github.com/aubaro01/paw-project" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fab fa-github mr-2"></i> Código
                             </a>
-                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 5 - Melhorado -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-yellow-50 to-yellow-100 flex items-center justify-center relative">
+                        <img src="assets/img/sav.png" alt="MYDash" class="h-24 object-contain">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent h-16"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">MYDash</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Pessoal</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">Dashboard administrativo completo com autenticação, CRUD e relatórios personalizáveis.</p>
+                        <div class="mb-5">
+                            <h4 class="text-sm font-semibold text-gray-500 mb-2">DESTAQUES:</h4>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Painel administrativo</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Controle de usuários</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Exportação de dados</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Bootstrap</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-4">
+                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
+                                <i class="fab fa-github mr-2"></i> Código
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center text-sm">
                                 <i class="fas fa-external-link-alt mr-2"></i> Demo
                             </a>
                         </div>
@@ -489,7 +557,7 @@
                 <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-gray-100">
                     <div class="text-center">
                         <i class="fas fa-plus-circle text-4xl text-gray-400 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Seu Projeto Aqui?</h3>
+                        <h3 class="text-xl font-bold mb-2">Quer o seu Projeto Aqui?</h3>
                         <p class="text-gray-600 mb-4">Estou disponível para novos desafios e colaborações.</p>
                         <a href="#contato" class="inline-block bg-primary hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition">
                             Contate-me
@@ -500,134 +568,205 @@
         </div>
     </section>
 
-    <!-- Experiência -->
+  
     <section id="experiencia" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">Minha <span class="gradient-text">Jornada</span></h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Minhas experiências profissionais e acadêmicas que moldaram minha carreira
+                    Minhas experiências profissionais e acadêmicas
                 </p>
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
             </div>
             
+            <!-- Abas de Experiência -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-lg border border-gray-200 overflow-hidden">
+                    <button id="tab-tech" class="experience-tab active px-6 py-3 font-medium">
+                        <i class="fas fa-code mr-2"></i> Com Programação
+                    </button>
+                    <button id="tab-nontech" class="experience-tab px-6 py-3 font-medium bg-white text-gray-700">
+                        <i class="fas fa-briefcase mr-2"></i> Sem Programação
+                    </button>
+                </div>
+            </div>
+            
             <div class="max-w-3xl mx-auto">
-                <!-- Educação -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-semibold mb-6 flex items-center">
-                        <i class="fas fa-graduation-cap text-primary mr-3"></i>
-                        Educação
-                    </h3>
-                    
-                    <div class="space-y-8 relative pl-8">
-                        <!-- Item 1 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">ISTEC - Instituto Superior de Tecnologias Avançadas</h4>
-                                <p class="text-gray-500 mb-2">2023 - 2025 (Atual)</p>
-                                <p class="text-gray-700">Curso de Desenvolvimento de Software com foco em arquitetura de sistemas, engenharia de software e tecnologias modernas.</p>
+                <!-- Conteúdo da Aba Tech -->
+                <div id="tech-content">
+                    <!-- Educação -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                            Educação
+                        </h3>
+                        
+                        <div class="space-y-8 relative pl-8">
+                            <!-- Item 1 -->
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                    <h4 class="font-bold text-lg mb-1">ISTEC - Instituto Superior de Tecnologias Avançadas</h4>
+                                    <p class="text-gray-500 mb-2">2023 - 2025 (Atual)</p>
+                                    <p class="text-gray-700">Curso de Desenvolvimento de Software</p>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Algoritmos</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Arquitetura de Software</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Base de Dados</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Desenvolvimento Web</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Escola Secundária de Valongo </h4>
+                                    <hp class="font-bold text-lg mb-1">Gestão e Programação de Sistemas Informáticos</p>
+                                    <p class="text-gray-500 mb-2">2020 - 2023</p>
+                                    <p class="text-gray-700">Gestão de sistemas, redes e programas informáticos.</p>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Programação</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Redes</span>       
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                            <i class="fas fa-laptop-code text-primary mr-3"></i>
+                            Experiência com Programação
+                        </h3>
                         
-                        <!-- Item 2 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">Gestão e Programação de Sistemas Informáticos</h4>
-                                <p class="text-gray-500 mb-2">2020 - 2023</p>
-                                <p class="text-gray-700">Formação técnica em desenvolvimento de software, banco de dados e gestão de sistemas de informação.</p>
+                        <div class="space-y-8 relative pl-8">
+     >
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                    <h4 class="font-bold text-lg mb-1">Estágio DREAM ID</h4>
+                                    <p class="text-gray-500 mb-2">Abril 2023 - Julho 2023</p>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                        <li>Configuração e manutenção de sistemas informáticos para clientes</li>
+                                        <li>Suporte técnico presencial a clientes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                    <h4 class="font-bold text-lg mb-1">Estágio Câmara Municipal de Valongo</h4>
+                                    <p class="text-gray-500 mb-2">Junho 2022 - Julho 2022</p>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                        <li>Manutenção e atualização de sistemas municipais</li>
+                                        <li>Desenvolvimento de pequenas aplicações para departamentos internos</li>
+                                        <li>Criação de documentação técnica para sistemas existentes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                    <h4 class="font-bold text-lg mb-1">Projetos Freelance</h4>
+                                    <p class="text-gray-500 mb-2">2024 - Atualmente</p>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                        <li>Desenvolvimento de websites responsivos para pequenos negócios</li>
+                                        <li>Criação de sistemas de gestão personalizados conforme necessidades dos clientes</li>
+                                        <li>Consultoria em tecnologia e infraestrutura para startups</li>
+                                        <li>Migração de sistemas legados para novas tecnologias</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Experiência Profissional -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-semibold mb-6 flex items-center">
-                        <i class="fas fa-briefcase text-primary mr-3"></i>
-                        Experiência Profissional
-                    </h3>
-                    
-                    <div class="space-y-8 relative pl-8">
-                        <!-- Item 1 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">Estágio DREAM ID</h4>
-                                <p class="text-gray-500 mb-2">Abril 2023 - Julho 2023</p>
-                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                                    <li>Manutenção e configuração de hardware e software</li>
-                                    <li>Suporte técnico a clientes e resolução de problemas</li>
-                                    <li>Configuração de redes e sistemas informáticos</li>
-                                    <li>Desenvolvimento de um software interno para gestão de tickets</li>
-                                </ul>
-                            </div>
-                        </div>
+                <div id="nontech-content" class="hidden">
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                            <i class="fas fa-briefcase text-primary mr-3"></i>
+                            Experiência sem Programação
+                        </h3>
                         
-                        <!-- Item 2 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">Manager - Moamba d'Angola</h4>
-                                <p class="text-gray-500 mb-2">Setembro 2023 - Atualmente</p>
-                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                                    <li>Gestão de inventário e controle de estoque</li>
-                                    <li>Atendimento ao cliente e gestão de vendas</li>
-                                    <li>Organização de encomendas e logística</li>
-                                </ul>
+                        <div class="space-y-8 relative pl-8">
+                            <!-- Item 1 -->
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                    <h4 class="font-bold text-lg mb-1">Manager - Moamba d'Angola</h4>
+                                    <p class="text-gray-500 mb-2">Setembro 2023 - Atualmente</p>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                        <li>Gestão completa de inventário e controle de estoque</li>
+                                        <li>Atendimento ao cliente e gestão de vendas</li>
+                                        <li>Organização de encomendas e logística de entrega</li>
+                                        <li>Supervisão de equipe e treinamento de novos funcionários</li>
+                                    </ul>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Gestão</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Atendimento</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Logística</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- Item 3 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">Estágio Câmara Municipal de Valongo</h4>
-                                <p class="text-gray-500 mb-2">Junho 2022 - Julho 2022</p>
-                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                                    <li>Apoio na organização e finalização de projetos</li>
-                                    <li>Manutenção e atualização de sistemas municipais</li>
-                                    <li>Criação de documentação técnica</li>
-                                </ul>
+                            
+                            <!-- Item 2 -->
+                            <div class="timeline-item relative pl-6">
+                                <div class="timeline-dot"></div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                    <h4 class="font-bold text-lg mb-1">Trabalho Voluntário</h4>
+                                    <p class="text-gray-500 mb-2">2023 - Atualmente</p>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                        <li>------</li>
+                                        <li>-------</li>
+                                        <li>-------</li>
+                                    </ul>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Organização</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Freelance e Voluntariado -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 flex items-center">
-                        <i class="fas fa-code-branch text-primary mr-3"></i>
-                        Freelance & Voluntariado
-                    </h3>
-                    
-                    <div class="space-y-8 relative pl-8">
-                        <!-- Item 1 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
-                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">Projetos Freelance</h4>
-                                <p class="text-gray-500 mb-2">2021 - Atualmente</p>
-                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                                    <li>Desenvolvimento de websites para pequenos negócios</li>
-                                    <li>Criação de sistemas de gestão personalizados</li>
-                                    <li>Consultoria em tecnologia e infraestrutura</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                            <i class="fas fa-star text-primary mr-3"></i>
+                            Habilidades Desenvolvidas
+                        </h3>
                         
-                        <!-- Item 2 -->
-                        <div class="timeline-item relative pl-6">
-                            <div class="timeline-dot"></div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                                <h4 class="font-bold text-lg mb-1">Trabalho Voluntário</h4>
-                                <p class="text-gray-500 mb-2">Dezembro 2023 - Atualmente</p>
-                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                                    <li>Manutenção de redes informáticas para associação religiosa</li>
-                                    <li>Organização de eventos comunitários</li>
-                                    <li>Projetos de pintura e manutenção de espaços públicos</li>
-                                </ul>
+                                <h4 class="font-bold text-lg mb-3 flex items-center">
+                                    <i class="fas fa-users text-blue-500 mr-2"></i>
+                                    Gestão de Equipe
+                                </h4>
+                                <p class="text-gray-700">Experiência prática na liderança e coordenação de equipes, desenvolvendo habilidades de comunicação e motivação.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-3 flex items-center">
+                                    <i class="fas fa-comments text-green-500 mr-2"></i>
+                                    Atendimento ao Cliente
+                                </h4>
+                                <p class="text-gray-700">Habilidade em lidar com diferentes perfis de clientes, resolver conflitos e garantir satisfação.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-3 flex items-center">
+                                    <i class="fas fa-boxes text-purple-500 mr-2"></i>
+                                    Gestão de Estoque
+                                </h4>
+                                <p class="text-gray-700">Controle eficiente de inventário, previsão de demanda e organização logística.</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-3 flex items-center">
+                                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                                    Resolução de Problemas
+                                </h4>
+                                <p class="text-gray-700">Capacidade de analisar situações complexas e implementar soluções práticas.</p>
                             </div>
                         </div>
                     </div>
@@ -636,13 +775,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
+    <footer id="contato" class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6"> 
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
                     <a href="#" class="text-2xl font-bold gradient-text">Cláudio Barroso</a>
-                    <p class="mt-2 text-gray-400">Full Stack Developer & Software Engineer</p>
+                    <p class="mt-1 text-gray-400">Full Stack Developer & Software Engineer</p>
                 </div>
                 
                 <div class="flex space-x-6">
@@ -661,13 +799,8 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Cláudio Barroso. Todos os direitos reservados.</p>
-                
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Termos de Serviço</a>
-                </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Cláudio Barroso. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -710,6 +843,30 @@
             } else {
                 header.classList.remove('shadow-md');
             }
+        });
+        
+        // Experience tabs functionality
+        const techTab = document.getElementById('tab-tech');
+        const nonTechTab = document.getElementById('tab-nontech');
+        const techContent = document.getElementById('tech-content');
+        const nonTechContent = document.getElementById('nontech-content');
+        
+        techTab.addEventListener('click', function() {
+            this.classList.add('active');
+            this.classList.remove('bg-white', 'text-gray-700');
+            nonTechTab.classList.remove('active');
+            nonTechTab.classList.add('bg-white', 'text-gray-700');
+            techContent.classList.remove('hidden');
+            nonTechContent.classList.add('hidden');
+        });
+        
+        nonTechTab.addEventListener('click', function() {
+            this.classList.add('active');
+            this.classList.remove('bg-white', 'text-gray-700');
+            techTab.classList.remove('active');
+            techTab.classList.add('bg-white', 'text-gray-700');
+            nonTechContent.classList.remove('hidden');
+            techContent.classList.add('hidden');
         });
     </script>
 </body>
