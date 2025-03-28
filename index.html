@@ -3,407 +3,794 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Cláudio Barroso, Full Stack Developer Web e Software Developer">
-    <meta name="keywords" content="portfolio, desenvolvedor, full stack, software developer, Cláudio Barroso">
+    <meta name="description" content="Portfólio de Cláudio Barroso - Full Stack Developer e Software Engineer">
+    <meta name="keywords" content="portfolio, desenvolvedor, full stack, engenheiro de software, Cláudio Barroso">
     <meta name="author" content="Cláudio Barroso">
-    <title>Portifolio - Cláudio Barroso</title>
-    <link rel ="stylesheet" href="../assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/img/IMG_6017.ico " type="image/x-icon" alt="Logotipo">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <title>Cláudio Barroso | Full Stack Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-       #habilidade {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.row-wrapper-habilidade {
-    display: flex;
-    overflow-x: scroll; /* Permite a rolagem horizontal */
-    scroll-snap-type: x mandatory; /* Faz com que o conteúdo pare de forma mais agradável */
-    gap: 20px;
-}
-
-.row-habilidade {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os itens */
-}
-
-.tech-card {
-    width: 120px; /* Definição de um tamanho consistente */
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.tech-card:hover {
-    transform: scale(1.1);
-}
-
-.tech-icon {
-    width: 40px !important;
-    height: 40px !important;
-}
-
-/* Caso queira uma rolagem contínua, é possível usar animação com CSS */
-.scroller-habilidade {
-    display: flex;
-    animation: scrollAnimation 15s linear infinite; /* Efeito contínuo */
-}
-
-@keyframes scrollAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%); /* Rolagem completa */
-    }
-}
-
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6, #10B981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .profile-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
+            z-index: 0;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, #ffffff, #f9fafb);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #E5E7EB;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -1.75rem;
+            top: 0.25rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background: #3B82F6;
+        }
     </style>
 </head>
-<body>
-    <header class="bg-dark text-white text-center py-3">
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="#sobre">Sobre mim</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#habilidade">Skills</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#projetos">Projetos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#experiencia">Experiência</a></li>
-            </ul>
-        </nav> 
-    </header>   
-    <main>
-        <section class="bg-light text-center py-5">
-            <div class="container">
-                <h1>Cláudio Barroso</h1>
-                <p class="lead"><br>Full Stack Developer Web</p>
-                <p class="lead"><br>Software Developer</p>
-            </div>
-        </section>
-
-        <section id="sobre" class="container py-5">
-            <h2 class="justify-content-sm-start">Quem sou?</h2>
-            <img src="assets/img/perf.jpg" class="rounded float-end img-fluid ms-5" alt="Cláudio Barroso" style="max-width: 300px;">
-            <p class="lead"><br>Olá, chamo-me <strong>Cláudio Barroso </strong>e como podem ver sou um amante de tecnologia. Programação começou a torna-se realidade para mim em 2020 quando iniciei o curso de <strong>Gestão e Programação de Sistemas Informáticos.</strong><br> A partir daí inicia a "caminhada" dentro do mundo da programação. Também sou (2025) aluno no <strong>ISTEC ( Instituto Superior de Tecnologias Avançadas do Porto)</strong>, onde estou a frequentar o curso de Desenvolvimento de Software.<br>
-            <br>Tenho como alvos e paixões aprender e fazer mais neste mundo da programação, por isso, quem vai saber o meu próximo passo? :)).<br>
-            <br>Atenciosamente,<br>
-              <em>Cláudio Barroso</em>  
-            </p>
-             <p><br><a href="mailto:claudiobarroso106@gmail.com" aria-label="Enviar email"><i class="bi bi-envelope"></i>claudiobarroso106@gmail.com</a></p>
-            <p><a href="https://github.com/aubaro01" aria-label="Perfil GitHub" target="_blank"><i class="bi bi-github"></i>Aubaro01</a></p>
-            
-            <h2>Anexos</h2>
-            <p><br><a href="assets/anexos/cv_ClaudioPT.pdf" download aria-label="Download CV"><i class="bi bi-download"></i> Curriculum Vitae</a></p>
-            <p><a href="assets/anexos/analista_dados.pdf" download aria-label="Download Certificado"><i class="bi bi-download"></i>Certificado google em Dados</a></p>
-        </section>
-
-  <section id="habilidade">
-    <h2 class="mt-5 text-center">Skills</h2>
-      <br>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="tech-icon">
-                    <h6 class="card-title mt-2">HTML5</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="tech-icon">
-                    <h6 class="card-title mt-2">CSS3</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="PHP" class="tech-icon">
-                    <h6 class="card-title mt-2">PHP</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/mongodb.svg" alt="MongoDB" class="tech-icon">
-                    <h6 class="card-title mt-2">MongoDB</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mysql.svg" alt="MySQL" class="tech-icon">
-                    <h6 class="card-title mt-2">MySQL</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript" class="tech-icon">
-                    <h6 class="card-title mt-2">JavaScript</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
-                    <h6 class="card-title mt-2">Python</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@8.15.0/icons/c.svg" alt="C" class="tech-icon">
-                    <h6 class="card-title mt-2">C</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
-                    <h6 class="card-title mt-2">Bootstrap</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
-                    <h6 class="card-title mt-2">React.js</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/express.svg" alt="Express.js" class="tech-icon">
-                    <h6 class="card-title mt-2">Express.js</h6>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                <div class="card tech-card text-center p-3">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/laravel.svg" alt="Laravel" class="tech-icon">
-                    <h6 class="card-title mt-2">Laravel</h6>
-                </div>
+<body class="font-sans bg-light text-dark antialiased">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">CB</a>
+                
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#sobre" class="font-medium hover:text-primary transition">Sobre</a></li>
+                        <li><a href="#skills" class="font-medium hover:text-primary transition">Skills</a></li>
+                        <li><a href="#projetos" class="font-medium hover:text-primary transition">Projetos</a></li>
+                        <li><a href="#experiencia" class="font-medium hover:text-primary transition">Experiência</a></li>
+                        <li><a href="#contato" class="font-medium hover:text-primary transition">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-        <section id="projetos" class="container py-5">
-            <h2 class="text-center mb-5">Projetos</h2>
-            <div class="row justify-content-center">
-                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/maclongo.png" alt="Projeto 2" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Maclongo</h5>
-                            <p class="card-text">Restruturação e implementação de novas funções para o site.</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">HTML</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">CSS</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Bootstrap</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">PHP</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Mysql</span></li>
-                            </ul>
-                            <a href="https://github.com/aubaro01/Maclongo_Projeto" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/sav.png" alt="Projeto 2" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Primeiros Socorros</h5>
-                            <p class="card-text">Um projeto para um dia de voluntáriado, relacionado com prevenção e segurança</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">React.js</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">MongoDB</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Bootstrap</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Express.js</span></li>
-                            </ul>
-                            <a href="https://github.com/aubaro01/Prsocorros" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/pc_auto.png" alt="Projeto 2" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Pc Auto</h5>
-                            <p class="card-text">Criação de uma App em python que faça a gestão de clientes, veículos e marcações a uma oficina</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Python</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Mysql</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Tkinter</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Mysql</span></li>
-                            </ul>
-                            <a href="https://github.com/aubaro01/Pc-Auto" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/docto.png" alt="Projeto 3" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Projeto de PAW</h5>
-                            <p class="card-text">Uma aplicação web para psicólogos. Projeto colaborativo.</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Express.js</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Next.js</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">tailwind css</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">MongoDB</span></li>
-                            </ul>
-                            <a href="https://github.com/aubaro01/paw-project" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/sav.png" alt="Projeto 2" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">MYDash</h5>
-                            <p class="card-text">Um CRUD simples em php</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">HTML</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">CSS</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Bootstrap</span></li>
-                                <li class="list-inline-item"><span class="bbadge rounded-pill text-bg-dark">PHP</span></li>
-                                <li class="list-inline-item"><span class="badge rounded-pill text-bg-dark">Mysql</span></li>
-                            </ul>
-                            <a href="https://github.com/aubaro01/Prsocorros" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-               <!-- <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/git.png" alt="Projeto 3" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Pc Auto Web</h5>
-                            <p class="card-text">Criação de uma App Web que faça a gestão de clientes, veículos e marcações a uma oficina</p>
-                            <a href="https://github.com/aubaro01/Pc_Auto-Web" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div> -->
-             <!--    <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/git.png" alt="Projeto 3" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">State2State</h5>
-                            <p class="card-text">Um Projeto web, em que mostra o mundo da forma que eu vejo</p>
-                            <a href="https://github.com/aubaro01/State2State" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div> -
-                 
-                  <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-lg rounded-3 border-0">
-                        <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 150px; background-color: #f8f9fa;">
-                            <img src="assets/img/git.png" alt="Projeto 2" style="max-height: 80px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">tell me about?</h5>
-                            <p class="card-text">Uma web app que consome uma api..</p>
-                            <a href="https://github.com/aubaro01/#" class="btn btn-primary">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        </section>
-
-
-        <section id="experiencia" class="container py-5">
-            <h2 class="text-center mb-5">Experiência</h2>
-            
-            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="programacao-tab" data-bs-toggle="tab" data-bs-target="#programacao" type="button" role="tab" aria-controls="programacao" aria-selected="true">Dentro da Informártica</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="outros-tab" data-bs-toggle="tab" data-bs-target="#outros" type="button" role="tab" aria-controls="outros" aria-selected="false">Fora da Informártica</button>
-                </li>
-            </ul>
-
-            <div class="tab-content mt-3" id="myTabContent">
-                <div class="tab-pane fade show active" id="programacao" role="tabpanel" aria-labelledby="programacao-tab">
-                    <h3 class="mt-4">Experiências com Informática</h3><br>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <strong>Estágio DREAM ID </strong>
-                            <p><strong>Abril 2023 - Julho 2023</strong></p>
-                            <p>Neste estagio realizei a manutenção e configuração de pc’s, suporte técnico a clientes, configuração de sistemas de redes e montagem de sistemas informáticos. <br>
-                               Além disso fiz um miniprojeto que copiava osoftware da empresa.</p>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Estágio Epharma</strong>
-                            <p><strong>Março 2025 - Julho 2025</strong></p>
-                            <p>-----</p>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Projetos freelancer</strong>
-                            <p>Projetos para lojas (web sites, web app para gestão) e para outros tipos de empreendimentos</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-pane fade" id="outros" role="tabpanel" aria-labelledby="outros-tab">
-                    <h3 class="mt-4">Experiências Fora da Informática</h3><br>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <strong>Manager de loja(Moamba d'Angola)</strong>
-                            <p><strong>setembro 2023 / Atualmente</strong></p>
-                            <p>Gestão de produtos, encomendas, atendimento ao público e vendas.</p>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Estágio Cm Valongo</strong>
-                            <p><strong>Junho 2022 - Julho 2022</strong></p>
-                            <p>Apoio em projetos, criação de ideias, auxilio na organização e finalização de projetos já existentes.<br>
-                               Manutenção e atualizaçãodo sistemas da câmara Municipal.</p>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Trabalhos voluntários</strong>
-                            <p><strong>Dezembro 2023 / Atualmente</strong></p>
-                            <p>Participação em projetos voluntários em diferentes áreas...<br> como, pintura, manunteção de jardins, manunteção de redes informáticas para uma associação religiosa.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="contato" class="container py-5 bg-light rounded">
-            <h2 class="text-center mb-4">Contato</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <p class="text-center">Interessado em trabalhar juntos? Entre em contato!</p>
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="mailto:claudiobarroso106@gmail.com" class="btn btn-outline-dark">
-                            <i class="bi bi-envelope"></i> Email
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                        Olá, eu sou <span class="gradient-text">Cláudio Barroso</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
+                        Full Stack Developer & Software Engineer
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        Desenvolvedor apaixonado por criar soluções digitais inovadoras e eficientes. Combinando design e funcionalidade para construir experiências excepcionais.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contato" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                            Contate-me
                         </a>
-                        <a href="https://github.com/aubaro01" class="btn btn-outline-dark" target="_blank">
-                            <i class="bi bi-github"></i> GitHub
+                        <a href="#projetos" class="border border-primary text-primary hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">
+                            Ver Projetos
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="profile-card w-80 h-80 rounded-2xl overflow-hidden shadow-xl">
+                        <img src="assets/img/perf.jpg" alt="Cláudio Barroso" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Sobre <span class="gradient-text">Mim</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-2/5">
+                    <div class="bg-white p-8 rounded-xl shadow-lg relative">
+                        <div class="absolute -top-5 -left-5 bg-primary w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Minha jornada na tecnologia começou em 2020 com o curso de <strong class="font-semibold">Gestão e Programação de Sistemas Informáticos</strong>, e desde então tenho me dedicado intensamente ao desenvolvimento de software.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Atualmente em 2025, estou cursando <strong class="font-semibold">Desenvolvimento de Software no ISTEC</strong>, onde aprofundo meus conhecimentos em arquitetura de sistemas, engenharia de software e tecnologias modernas.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Acredito que a tecnologia deve resolver problemas reais e melhorar a vida das pessoas. Meu objetivo é continuar evoluindo como profissional, enfrentando desafios complexos e contribuindo para projetos inovadores.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-semibold text-primary mb-2">Nome:</h4>
+                            <p>Cláudio Barroso</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-semibold text-primary mb-2">Email:</h4>
+                            <a href="mailto:claudiobarroso106@gmail.com" class="hover:text-primary">claudiobarroso106@gmail.com</a>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-semibold text-primary mb-2">GitHub:</h4>
+                            <a href="https://github.com/aubaro01" target="_blank" class="hover:text-primary">github.com/aubaro01</a>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-semibold text-primary mb-2">Formação:</h4>
+                            <p>Desenvolvimento de Software</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-3/5">
+                    <h3 class="text-2xl font-semibold mb-6">Minhas <span class="gradient-text">Habilidades</span></h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-medium mb-3">Frontend Development</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-medium mb-3">Backend Development</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Express.js</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Laravel</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-medium mb-3">Banco de Dados</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-medium mb-3">Outras Tecnologias</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Git</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">REST APIs</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">C</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <a href="assets/anexos/cv_ClaudioPT.pdf" download class="flex items-center bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-medium transition">
+                            <i class="fas fa-download mr-2"></i> Baixar CV
+                        </a>
+                        <a href="assets/anexos/analista_dados.pdf" download class="flex items-center bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 px-6 py-3 rounded-lg font-medium transition">
+                            <i class="fas fa-certificate mr-2"></i> Certificados
                         </a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>   
-    <footer class="bg-dark text-white text-center py-3 mt-4">
-        <p>&copy; 2025 aubaro01.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Minhas <span class="gradient-text">Skills</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Tecnologias e ferramentas que domino e utilizo regularmente em meus projetos
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">HTML5</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">CSS3</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">JavaScript</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">React.js</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">Node.js</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">Express.js</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">MongoDB</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">MySQL</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">PHP</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">Python</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">Bootstrap</h4>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-xl shadow-md flex flex-col items-center transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mb-3">
+                    <h4 class="font-medium">Git</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Meus <span class="gradient-text">Projetos</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Alguns dos projetos que desenvolvi, demonstrando minha variedade de habilidades e experiência
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <img src="assets/img/maclongo.png" alt="Maclongo" class="h-24">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Maclongo</h3>
+                        <p class="text-gray-600 mb-4">Restruturação completa e implementação de novas funcionalidades para o website da empresa.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">CSS</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Bootstrap</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="https://github.com/aubaro01/Maclongo_Projeto" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> Código
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <img src="assets/img/sav.png" alt="Primeiros Socorros" class="h-24">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Primeiros Socorros</h3>
+                        <p class="text-gray-600 mb-4">Aplicação web para voluntariado em prevenção e segurança, com guias interativos.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MongoDB</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Express.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Node.js</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> Código
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <img src="assets/img/pc_auto.png" alt="PC Auto" class="h-24">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">PC Auto</h3>
+                        <p class="text-gray-600 mb-4">Sistema de gestão para oficinas automóveis com controle de clientes, veículos e marcações.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Tkinter</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="https://github.com/aubaro01/Pc-Auto" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> Código
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <img src="assets/img/docto.png" alt="Projeto PAW" class="h-24">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Projeto PAW</h3>
+                        <p class="text-gray-600 mb-4">Plataforma web para psicólogos com agendamento, histórico de pacientes e relatórios.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Next.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MongoDB</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Node.js</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="https://github.com/aubaro01/paw-project" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> Código
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 5 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <img src="assets/img/sav.png" alt="MYDash" class="h-24">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">MYDash</h3>
+                        <p class="text-gray-600 mb-4">Sistema de dashboard administrativo com CRUD completo e autenticação de usuários.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Bootstrap</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="https://github.com/aubaro01/Prsocorros" target="_blank" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> Código
+                            </a>
+                            <a href="#" class="text-primary hover:text-blue-700 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 6 (Placeholder) -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg border border-gray-100 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div class="text-center">
+                        <i class="fas fa-plus-circle text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Seu Projeto Aqui?</h3>
+                        <p class="text-gray-600 mb-4">Estou disponível para novos desafios e colaborações.</p>
+                        <a href="#contato" class="inline-block bg-primary hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition">
+                            Contate-me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência -->
+    <section id="experiencia" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Minha <span class="gradient-text">Jornada</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Minhas experiências profissionais e acadêmicas que moldaram minha carreira
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Educação -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                        Educação
+                    </h3>
+                    
+                    <div class="space-y-8 relative pl-8">
+                        <!-- Item 1 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">ISTEC - Instituto Superior de Tecnologias Avançadas</h4>
+                                <p class="text-gray-500 mb-2">2023 - 2025 (Atual)</p>
+                                <p class="text-gray-700">Curso de Desenvolvimento de Software com foco em arquitetura de sistemas, engenharia de software e tecnologias modernas.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Gestão e Programação de Sistemas Informáticos</h4>
+                                <p class="text-gray-500 mb-2">2020 - 2023</p>
+                                <p class="text-gray-700">Formação técnica em desenvolvimento de software, banco de dados e gestão de sistemas de informação.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiência Profissional -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-briefcase text-primary mr-3"></i>
+                        Experiência Profissional
+                    </h3>
+                    
+                    <div class="space-y-8 relative pl-8">
+                        <!-- Item 1 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Estágio DREAM ID</h4>
+                                <p class="text-gray-500 mb-2">Abril 2023 - Julho 2023</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Manutenção e configuração de hardware e software</li>
+                                    <li>Suporte técnico a clientes e resolução de problemas</li>
+                                    <li>Configuração de redes e sistemas informáticos</li>
+                                    <li>Desenvolvimento de um software interno para gestão de tickets</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Manager - Moamba d'Angola</h4>
+                                <p class="text-gray-500 mb-2">Setembro 2023 - Atualmente</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Gestão de inventário e controle de estoque</li>
+                                    <li>Atendimento ao cliente e gestão de vendas</li>
+                                    <li>Organização de encomendas e logística</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Estágio Câmara Municipal de Valongo</h4>
+                                <p class="text-gray-500 mb-2">Junho 2022 - Julho 2022</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Apoio na organização e finalização de projetos</li>
+                                    <li>Manutenção e atualização de sistemas municipais</li>
+                                    <li>Criação de documentação técnica</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelance e Voluntariado -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-code-branch text-primary mr-3"></i>
+                        Freelance & Voluntariado
+                    </h3>
+                    
+                    <div class="space-y-8 relative pl-8">
+                        <!-- Item 1 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Projetos Freelance</h4>
+                                <p class="text-gray-500 mb-2">2021 - Atualmente</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Desenvolvimento de websites para pequenos negócios</li>
+                                    <li>Criação de sistemas de gestão personalizados</li>
+                                    <li>Consultoria em tecnologia e infraestrutura</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="timeline-item relative pl-6">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                                <h4 class="font-bold text-lg mb-1">Trabalho Voluntário</h4>
+                                <p class="text-gray-500 mb-2">Dezembro 2023 - Atualmente</p>
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                    <li>Manutenção de redes informáticas para associação religiosa</li>
+                                    <li>Organização de eventos comunitários</li>
+                                    <li>Projetos de pintura e manutenção de espaços públicos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Vamos <span class="gradient-text">Conversar</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Estou disponível para oportunidades de trabalho, projetos freelance ou apenas para bater um papo sobre tecnologia
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <!-- Informações de Contato -->
+                        <div class="md:w-2/5 bg-gradient-to-b from-primary to-secondary p-8 text-white">
+                            <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope text-xl mr-4 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <a href="mailto:claudiobarroso106@gmail.com" class="hover:underline">claudiobarroso106@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fab fa-github text-xl mr-4 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">GitHub</h4>
+                                        <a href="https://github.com/aubaro01" target="_blank" class="hover:underline">github.com/aubaro01</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-xl mr-4 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Localização</h4>
+                                        <p>Porto, Portugal</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-6">
+                                    <h4 class="font-semibold mb-3">Redes Sociais</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Formulário de Contato -->
+                        <div class="md:w-3/5 p-8">
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                                    <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition">
+                                    Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">Cláudio Barroso</a>
+                    <p class="mt-2 text-gray-400">Full Stack Developer & Software Engineer</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Cláudio Barroso. Todos os direitos reservados.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Back to Top Button -->
+    <a href="#" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition z-50">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('header button').addEventListener('click', function() {
+            const nav = document.querySelector('header nav');
+            nav.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const nav = document.querySelector('header nav');
+                if (!nav.classList.contains('hidden')) {
+                    nav.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
 </body>
 </html>
-
